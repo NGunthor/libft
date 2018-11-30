@@ -6,7 +6,7 @@
 /*   By: ngunthor <ngunthor@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 13:47:52 by ngunthor          #+#    #+#             */
-/*   Updated: 2018/11/29 21:35:11 by ngunthor         ###   ########.fr       */
+/*   Updated: 2018/11/30 13:03:50 by anonymous        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,13 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <limits.h>
+
+typedef struct		s_list
+{
+	void 			*content;
+	size_t			content_size;
+	struct s_list	*next
+}					t_list;
 
 void			ft_bzero(void *s, size_t n);
 void			*ft_memccpy(void *dest, const void *src, int c, size_t n);
@@ -71,5 +78,12 @@ void			ft_putstr_fd(char const *s, int fd);
 void			ft_putchar_fd(int c, int fd);
 void			ft_putendl_fd(char const *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
+t_list			*ft_lstnew(void const *content, size_t content_size);
+void 			ft_lstdel(t_list **alst, void (*del)(void *, size_t));
+void			ft_lstdelone(t_list **alst, void (*del)(void*, size_t));
+void			ft_lstadd(t_list **alst, t_list *new);
+void			ft_lstiter(t_list *lst, void (*f)(t_list *elem));
+void			ft_list_push_back(t_list **begin_list, t_list *elem);
+t_list			*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 
 #endif

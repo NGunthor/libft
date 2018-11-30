@@ -6,11 +6,10 @@
 /*   By: ngunthor <ngunthor@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 13:52:30 by ngunthor          #+#    #+#             */
-/*   Updated: 2018/11/29 20:45:21 by ngunthor         ###   ########.fr       */
+/*   Updated: 2018/11/30 11:44:26 by anonymous        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 
 #include <string.h>
 #include <ctype.h>
